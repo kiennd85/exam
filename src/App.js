@@ -46,7 +46,11 @@ function App() {
   };
 
   const deposit_handle = async () => {
-    await contract.deposit({ value: parseEther(deposit_amount) });
+    try {
+      await contract.deposit({ value: parseEther(deposit_amount) });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const withdraw_amount_handle = (e) => {
@@ -54,7 +58,11 @@ function App() {
   };
 
   const withdraw_handle = async () => {
-    await contract.withdraw(parseEther(withdraw_amount));
+    try {
+      await contract.withdraw(parseEther(withdraw_amount));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const get_donate_handle = async () => {
