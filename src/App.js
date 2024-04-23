@@ -63,8 +63,15 @@ function App() {
   };
 
   return (
-    <div>
-      <div style={{ margin: '10px' }}>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          paddingBottom: '20px',
+        }}
+      >
         <h1>WELCOME TO MY CONTRACT </h1>
         <div>
           <Button variant="contained" onClick={connect_wallet}>
@@ -117,6 +124,7 @@ function App() {
             </Button>
           </Stack>
         </div>
+        <br></br>
         <br></br>
         <div>
           <Stack direction="row" spacing={2}>
